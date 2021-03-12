@@ -1,0 +1,15 @@
+services:
+  backend:
+    image: colemclark/my-app:backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.backend
+    ports:
+      - "3000:5000"
+  frontend:
+    image: colemclark/my-app:frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8080:8080"
