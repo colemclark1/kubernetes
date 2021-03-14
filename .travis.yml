@@ -22,3 +22,8 @@ matrix:
       # command to run tests
       script:
         - npm run lint
+
+branches:
+  only:
+    - master
+    - develop
