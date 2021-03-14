@@ -1,0 +1,29 @@
+matrix:
+  include:
+    - language: python
+      python: 3.7
+      before_script:
+        - cd backend
+      install:
+        - pip install -r requirements.txt
+
+    - language: python
+      python: nightly
+      before_script:
+        - cd python
+      script:
+        - python -m unittest discover -p Test.py
+
+    - language: node_js
+      node_js: 15
+      before_script:
+        - cd frontend
+      cache:
+        directories:
+          - node_modules
+      # command to install dependencies
+      install:
+        - npm install
+      # command to run tests
+      script:
+        - npm test
