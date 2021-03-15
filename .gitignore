@@ -1,2 +1,3 @@
 postgres-secret.yaml
 frontend/node_modules
+.env
