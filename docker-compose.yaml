@@ -18,8 +18,6 @@ services:
     container_name: database
     ports:
       - "5400:5432"
-    expose:
-      - 5400
     environment:
       - PGDATA=/var/lib/postgresql/data
       - POSTGRES_DB=my-app
